@@ -32,7 +32,7 @@
         &lt;/main&gt;
     &lt;/body&gt;
 &lt;html&gt;
-</code></pre><p>It's literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote! Remember to include the Java wrapping code though, j2html is not a template language, all files are .java. To see how the wrapping code could look, check out the <a href="/">getting started example</a>.</p><p><em>New in j2html 0.7:</em><br>j2html 0.7 introduces a file-api, described fully on the <a href="http://localhost:8888/news.html#j2html-0.7-released">news page</a>.</p><h2 id="partials">Partials</h2><p>You can create partials for elements you use a lot:</p><pre><code class="language-java">public static Tag enterPasswordInput(String placeholder) {
+</code></pre><p>It's literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote! Remember to include the Java wrapping code though, j2html is not a template language, all files are .java. To see how the wrapping code could look, check out the <a href="/">getting started example</a>.</p><p><em>New in j2html 0.7:</em><br>j2html 0.7 introduces a file-api, described fully on the <a href="/news.html#j2html-0.7-released">news page</a>.</p><h2 id="partials">Partials</h2><p>You can create partials for elements you use a lot:</p><pre><code class="language-java">public static Tag enterPasswordInput(String placeholder) {
     return passwordInput(&quot;enterPassword&quot;, placeholder);
 }
 
