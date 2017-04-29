@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="j2html - Fast and fluent Java HTML builder. Build type-safe HTML 5 with Java 8 expression!"><title>Examples of how to use j2html - Java HTML builder</title><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700"><link rel="preload" src="/img/pattern.png"><style>/** * okaidia theme for JavaScript,CSS and HTML * Loosely based on Monokai textmate theme by http://www.monokai.nl/ * @author ocodia */code[class*="language-"],pre[class*="language-"]{color:#f8f8f2;direction:ltr;font-family:consolas,monaco,'Andale Mono',monospace;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,0.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*="language-"]{border-radius:0.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*="language-"],pre[class*="language-"]{background:#272822}:not(pre)>code[class*="language-"]{border-radius:.3em;padding:.1em}.token.comment,.token.prolog,.token.doctype,.token.cdata{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.property,.token.tag,.token.constant,.token.symbol,.token.deleted{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.selector,.token.attr-name,.token.string,.token.char,.token.builtin,.token.inserted{color:#a6e22e}.token.operator,.token.entity,.token.url,.language-css .token.string,.style .token.string,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.regex,.token.important{color:#fd971f}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>html{background:#eee url("data:image/png;base64,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") fixed;color:#43485a;font-family:arial,sans-serif}h1,h2,h3,nav a{font-family:"lato",sans-serif}html{overflow-y:scroll}html,body{margin:0}*{box-sizing:border-box;font-weight:300}p{line-height:24px;text-align:justify}a{color:#3a96da}li{line-height:20px;margin:10px 0}p,li{font-size:15px}dt{font-family:monospace;font-size:14px;font-weight:700;margin-top:10px}dd{font-size:13px;margin:0}header a img{margin-left:-60px;margin-top:10px;max-width:50px;position:absolute}h1.banner{box-shadow:0 2px 6px rgba(0,0,0,0.3);color:#fff;font-size:35px;margin:-20px -30px 0 -90px;padding:15px;text-align:center;text-shadow:1px 1px 1px rgba(0,0,0,0.5)}p code,li code{background:#eee;border-radius:3px;padding:1px 3px}h2{margin-bottom:-10px}body{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.5);margin:20px auto;max-width:876px}main{padding:20px}footer{border-top:1px solid #ddd;padding:10px;text-align:center}nav a{border-bottom:20px solid white;color:#2d425a;display:inline-block;font-size:25px;margin:0 25px;padding:25px 10px 5px;text-align:center;text-decoration:none;width:19%;width:calc(25% - 50px)}.error-code{color:#acaebb;margin-bottom:0}.lols{color:#777;font-size:9px;margin:0;text-align:center}a.active:nth-child(1){border-color:#f45a52}a.active:nth-child(2){border-color:#10a8c6}a.active:nth-child(3){border-color:#e4599d}a.active:nth-child(4){border-color:#54c781}#index h1{background:#f45a52}#download h1{background:#10a8c6}#examples h1{background:#e4599d}#news h1{background:#54c781}#not-found h1{background:#333}@media screen and (max-width: 1024px){#fork-me,header a img{display:none}h1.banner{border-radius:0;box-shadow:0 2px 6px rgba(0,0,0,0.3);font-size:25px;margin:-20px 0 0;padding:15px}nav a{border-bottom:15px solid white;font-size:20px;margin:0 20px;padding:15px 10px 10px;width:calc(25% - 40px)}}@media screen and (max-width: 666px){nav a{font-size:16px;margin:0 10px;padding:15px 0 10px;width:calc(25% - 25px)}nav a:first-of-type{margin-left:20px}nav a:last-of-type{margin-right:20px}}@media screen and (max-width: 480px){nav a{font-size:12px}h1.banner{font-size:18px}body{margin:0}code{font-size:12px}}</style></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W4XBCK"
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="j2html - Fast and fluent Java HTML builder. Build type-safe HTML 5 with Java 8 expression!"><title>Examples of how to use j2html - Java HTML builder</title><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700"><link rel="preload" src="/img/pattern.png"><style>/** * okaidia theme for JavaScript,CSS and HTML * Loosely based on Monokai textmate theme by http://www.monokai.nl/ * @author ocodia */code[class*="language-"],pre[class*="language-"]{color:#f8f8f2;direction:ltr;font-family:consolas,monaco,'Andale Mono',monospace;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,0.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*="language-"]{border-radius:0.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*="language-"],pre[class*="language-"]{background:#272822}:not(pre)>code[class*="language-"]{border-radius:.3em;padding:.1em}.token.comment,.token.prolog,.token.doctype,.token.cdata{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.property,.token.tag,.token.constant,.token.symbol,.token.deleted{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.selector,.token.attr-name,.token.string,.token.char,.token.builtin,.token.inserted{color:#a6e22e}.token.operator,.token.entity,.token.url,.language-css .token.string,.style .token.string,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.regex,.token.important{color:#fd971f}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>*{box-sizing:border-box}html,body{margin:0}html{background:#f5f5f5;font-family:arial,sans-serif;min-height:100%;overflow-y:scroll;position:relative}body{height:100%;margin-bottom:50px}h1,h2,h3,nav a{font-family:"lato",sans-serif}h1,h2,h3,h4{margin-bottom:0.2em;margin-top:1.5em}h1+p,h2+p,h3+p{margin-top:0}pre+p{margin-top:2em}#news h2:not(:first-of-type){margin-top:2em}p{font-family:verdana,arial,sans-serif;line-height:24px;text-align:justify}a{color:#009ebe;text-decoration:none}li{font-family:arial,sans-serif;line-height:20px;margin:10px 0}p,li{font-size:16px}dt{font-family:monospace;font-size:14px;font-weight:700;margin-top:10px}dd{font-size:13px;margin:0}.width-limit{margin:0 auto;max-width:840px;padding:0 20px}.top-header nav{position:relative}#github-stars{height:30px;position:absolute;right:27px;top:10px;width:100px}.top-header nav,.top-header ul{height:90px}#logo{font-size:20px;font-style:italic}#logo img{height:60px;margin:15px 10px 15px 0;vertical-align:middle}.top-header{background:#fff}.top-header ul{float:right;list-style:none;margin:0;padding:0}.top-header li{display:inline-block;margin:0 10px}.top-header ul li a{display:inline-block;font-size:18px;padding:50px 5px 15px}.banner{background:#1eb1cc;box-shadow:0 0 10px rgba(0,0,0,0.3) inset;color:#fff;height:100px;line-height:100px;margin:0;padding:0 25px;text-shadow:1px 1px 1px rgba(0,0,0,0.5)}.banner h1{font-size:40px;font-weight:300}p code,li code{background:rgba(30,177,204,0.1);border:1px solid rgba(26,142,167,0.49);border-radius:3px;font-family:monospace;font-size:85%;padding:1px 3px}footer{background:#f5f5f5;border-top:1px solid #ddd;bottom:0;font-size:13px;height:40px;left:0;line-height:40px;overflow:hidden;padding:0 20px;position:absolute;text-align:center;width:100%}.lols{color:#777;font-size:9px;margin:0;text-align:center}@media screen and (max-width: 1024px){#fork-me{display:none}.top-header{border-bottom:1px solid #ccc}}@media screen and (max-width: 768px){.banner{display:none}.top-header nav ul li{margin:0 5px}.top-header nav ul li a{font-size:16px}#logo{font-size:0}}@media screen and (max-width: 460px){#logo{display:none}.top-header nav ul li{margin:0 2px}.top-header nav ul li a{font-size:14px}}pre::-webkit-scrollbar{height:5px;width:5px}pre::-webkit-scrollbar-thumb{background:#777;border-radius:5px}pre::-webkit-scrollbar-thumb:hover{background:#999}pre::-webkit-scrollbar-track{background:#333;border-radius:5px}pre::-webkit-scrollbar-button{height:8px;width:8px}</style></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W4XBCK"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,71 +8,19 @@
 <a id="fork-me" href="https://github.com/tipsy/j2html" target="_blank">
     <img style="position:fixed;top:0;right:0;border:0;z-index:99999" src="data:image/png;base64,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" alt="Fork me on GitHub">
 </a>
-<header><nav><a href="/" class>Home</a><a href="/download.html" class>Download</a><a href="/examples.html" class="active">Examples</a><a href="/news.html" class>News</a></nav><a href="/"><img src="/img/logo.png" alt="j2html logo"></a></header><main><section id="examples"><h1 class="banner">Reclaim control over your HTML</h1>
-
-<div id="social">
-    <span id="socialLong">Like j2html? Let others know:</span>
-    <span id="socialShort">Share:</span>
-    <a onclick="tryReportEvent('Twitter Share')" target="_blank" href="https://twitter.com/intent/tweet?text=j2html - Fast and fluent Java HTML5 Builder&amp;url=http://j2html.com/&amp;via=j2html&amp;related=j2html" title="Share on Twitter">Twitter</a>
-    |
-    <a onclick="tryReportEvent('Reddit Share')" target="_blank" href="http://www.reddit.com/r/java/submit?url=http://j2html.com/&title=j2html%20-%20Fast%20and%20Fluent%20Java%20HTML5%20Builder">Reddit</a>
-    |
-    <a onclick="tryReportEvent('Facebook Share')" target="_blank" href="https://facebook.com/sharer.php?u=http://j2html.com/" title="Share on Facebook">Facebook</a>
-    |
-    <a onclick="tryReportEvent('Google+ Share')" target="_blank" href="https://plus.google.com/share?url=http://j2html.com/" title="Share on Google+">Google+</a>
-    <script>
-        function tryReportEvent(event) {
-            try {
-                ga(ga.getAll()[0].get("name")+".send", "event", "Social Click", event);
-            } catch(e){ console.log("Failed to send GA event: " + event)}
-        }
-        if(Math.random() > .5) {
-            //best practices all around
-            document.getElementById("social").innerHTML = 'Like j2html? Star us on GitHub: ' +
-                '<img class="githubStar" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAAUCAMAAADGMfHmAAABa1BMVEX6+vrV1dXu7u5ERET7+/vU1NT29vbw8PD09PUzMzP4+Pj5+fnz8/Px8fHy8vL8/f21tbXj4+P///+LzvTe3t6cnJz0zorLy8ufn59jY2MzMz6LMzP//frr6+tqsOXAwMCWlpaVlZWQkJCIiIj3+/319/rc9/j9/PPg4ODa2to3icqFhYV6enpwcHBXV1dWVlaxaTVFOTNdMzM5MzN/xPX4+PHt7e1xtuv+/eb2++TY2NjQ0ND29s7y883CwsK7u7u5ublghra0tLT/36nSoWk5M1FLS0tKSko/Pz/S///y+vyL0PrE9Pmh2PfQ6PWr2/P59PH18u2Hye3l5eWJtOVZpd6KxN1YqdT8/tLh88754r/r2LdRdrMzarPq37L33qjfxaVFbKX10JvlxptMTJL2z41dg4vqwYQzM399fX3nt3WpiHVsb2/hq2kzM2m/hV85M17DjFnSnUx/WTl4WDldRTmRTDN5TDNsMzNgA7IlAAABy0lEQVQ4y7WVZ1PbQBCGTzGWbhVhJKFgywXbuIGNCzahJbQQSnrvhd575+ezt5gPMGCdP/C8M7er08wz2pHmxHym0hSmjzAV/90Eu3zMtHhbi3zU7hek7ObsbrjTxRTe0hRcEU7FYPfBg0y57gfGE4nxAeYJOf3sfvxMecwoiTlA5hLYN4ycUxcpQp0iXjWMjFMXpCCVnHHdmeQmJHXi6cu+8GRWX/6q30TKqSIOwIRKTAA41MxX+6eqg88jneothPOJ5e0MCRPxDCBEzWqtP20PVQDy4on/ZjtgZ/odOUnp4eQqT4GLK6UMSarDlfDk+8zPyGB0aeXVVLW9A77ZOXFHEUoPJ0cKUOJ1ZiFFNZNbOJn+jLPz9J/tU0DnG1XliJTT4AbO3oMVI2bHKpIeqvz7hc6tg+//L9DZfrUvM7uB9MBsaUw0YyW0G4LdvQ+jZ/nRSKdxtPF2vSacBiHzjgKC3mIBClgAoDdADO/3hReznw5r+d/H4bXzH+gMEDLfUmsA86UcCmI1AcoWVgxvs+3oR1yjGdvG9bWdo305pyZiuRBv1eLgWnjVMDJOrU58RNNG4poXUs7Yo6aISZx1phNrSul4n8kP8e+4BKH0Q718MtVgAAAAAElFTkSuQmCC">' +
-                '<iframe id="githubStar" class="githubStar" src="https://ghbtns.com/github-btn.html?user=tipsy&repo=j2html&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>';
-        }
-    </script>
-    <style>
-        #social {
-            font-family: "Tahoma", arial, sans-serif;
-            background: #444444;
-            color: #fff;
-            padding: 0 14px;
-            height: 30px;
-            line-height: 30px;
-            border-radius: 5px;
-            margin: 20px 0;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-            position: relative;
-        }
-        .githubStar {
-            position: absolute;
-            top: 5px;
-            margin-left: 10px;
-            z-index: 1;
-        }
-        #githubStar {
-            z-index: 2;
-        }
-        #social a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 8px;
-        }
-        #social a:hover {
-            border-bottom: 1px dashed #fff;
-        }
-        @media (max-width: 480px) {
-            #socialLong { display: none; }
-            #social a { margin: 0 4px; }
-        }
-        @media (min-width: 481px) {
-            #socialShort { display: none; }
-        }
-    </style>
-</div>
-<h2 id="basic-example">Basic example</h2><p>Creating a basic webpage in j2html is pretty similar to HTML. This Java code:</p><pre><code class="language-java">html().with(
+<header class="top-header"><nav class="width-limit"><a id="logo" href="/"><span><img src="/img/logo_teal.png" alt="j2html logo">j2html</span></a><ul><li><a href="/">Home</a></li><li><a href="/download.html">Download</a></li><li><a href="/examples.html">Examples</a></li><li><a href="/news.html">News</a></li></ul><div id="github-stars"><img class="githubStar" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAAUCAMAAADGMfHmAAABaFBMVEX6+vrV1dXv7+/39/f////7+/vy8vIzMzP5+fnx8fH09PTt7e319fb8/Pz29vbb29vr6+vp6emVlZWLzvPn5+fh4eHe3t5jY2OLMzP8/v9ssejl5eXAwMD0zoqIiIh7e3tucHBKSkozMz///vz19/rc9/j9/PP49vD936ienp6FhYVXV1dWVlaxaTVFOTM5MzP2+v3//Pny8/d/xPX+/eb2++TY2NjQ0ND29s7y8802h8rCwsK7u7u5ubnixqCgoKD1z4s5M1E/Pz9eMzPS///y+vyL0PrE9Pmh2Pf29vXQ6PWKzvWr2/OHye13uuqJtOVlsN9Zpd6KxN1YqdT8/tLh887MzMw5jcn54r9eg7rr2Le1tbVRdrMzarPq37JjiLJFbKX10JtMTJL3zpFdg4vqwYQzM3/nt3WpiHXToWrhq2nRoGkzM2m/hV85M17DjFnSnUx/WTl4WDldRTmRTDN5TDNsMzNZMzPK1FGJAAABz0lEQVQ4y7WVZ2/bMBCGqWFeLaumLNeWHTveeybNaLNX99672Xvv/P0cmQEESCT6Q54X4J1I4gEICRTRLaZ0ALN0gcXu3kCsiPnQJ59gxBLKiEFux4hYhJm+jjAYdzJK7oIyolz1gVHbHg0QTxTuVNw2EOUBEbGnAZm2sXeNnFPjycAlGXxyjYxT46QgZWcdJ2unwdYE5Y1W7ndRG/+o3UTaGQUY0wRjAFHRVGb6KjMfnsa6bnOGHrk7g1pQm0ATVswTgAnRLbX7evT+JsBweauV+1fshszUK76iCKWH0wyaKXBwFGmALepAMzf3pvAt1pVfWHxWOXs7CZ/1El9RuNLDaZiGWYM6jiJZSIlaKI0fTr3Hsxs9f9aPIDwJL8zXOC/npAatAjCsGDx79aIzff3N/9/Rubb7ZfY03A3hi3mZs1OEQbY+wpuROtopZ3P73dDx8FDsE91ffbnS5k4qkHlHlJPO1KCGBQDSVDCw04L5on+v/fPXQW755Ou1U+Zb8lNMolH9gfUvQCOBFfM4ruv5Mo69hbiej/c+10tiXs6p8iQcSPrVJDgJfHKNjFO9JDmoqoNJ1QsZJ7PUjghJ3HWBqBVQ5ROKet/J9/HvOAcgtT0hoYvQ8AAAAABJRU5ErkJggg==">
+<iframe id="githubStar" class="githubStar" src="https://ghbtns.com/github-btn.html?user=tipsy&repo=j2html&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<style>
+    .githubStar {
+        position: absolute;
+        top: 5px;
+        margin-left: 10px;
+        z-index: 1;
+    }
+    #githubStar {
+        z-index: 2;
+    }
+</style></div></nav></header><header class="banner"><h1 class="width-limit">Reclaim control of your HTML</h1></header><main class="width-limit"><section id="examples"><h2 id="basic-example">Basic example</h2><p>Creating a basic HTML structure in j2html is pretty similar to plain HTML. This Java code:</p><pre><code class="language-java">html().with(
     head().with(
         title(&quot;Title&quot;),
         link().withRel(&quot;stylesheet&quot;).withHref(&quot;/css/main.css&quot;)
@@ -94,87 +42,62 @@
         &lt;/main&gt;
     &lt;/body&gt;
 &lt;html&gt;
-</code></pre><p>It&#x27;s literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote! Remember to include the Java wrapping code though, j2html is not a template language, all files are .java. To see how the wrapping code could look, check out the <a href="/">getting started example</a>.</p><p><em>New in j2html 0.7:</em><br>j2html 0.7 introduces a file-api, described fully on the <a href="/news.html#j2html-0.7-released">news page</a>.</p><h2 id="partials">Partials</h2><p>You can create partials for elements you use a lot:</p><pre><code class="language-java">public static Tag enterPasswordInput(String placeholder) {
-    return passwordInput(&quot;enterPassword&quot;, placeholder);
-}
+</code></pre><p>It&#x27;s literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote! Remember to include the Java wrapping code though, j2html is not a template language, all files are .java. To see how the wrapping code could look, check out the <a href="/">getting started example</a>.</p>
 
-public static Tag choosePasswordInput(String placeholder) {
-    return passwordInput(&quot;choosePassword&quot;, placeholder);
-}
+<div id="social">
+    <span id="socialShort">Share:</span>
+    <a onclick="tryReportEvent('Twitter Share')" target="_blank" href="https://twitter.com/intent/tweet?text=j2html - Fast and fluent Java HTML5 Builder&amp;url=https://j2html.com/&amp;via=j2html&amp;related=j2html" title="Share on Twitter">Twitter</a>
+    |
+    <a onclick="tryReportEvent('Reddit Share')" target="_blank" href="http://www.reddit.com/r/java/submit?url=https://j2html.com/&title=j2html%20-%20Fast%20and%20Fluent%20Java%20HTML5%20Builder">Reddit</a>
+    |
+    <a onclick="tryReportEvent('Facebook Share')" target="_blank" href="https://facebook.com/sharer.php?u=https://j2html.com/" title="Share on Facebook">Facebook</a>
+    <script>
+        function tryReportEvent(event) {
+            try {
+                ga(ga.getAll()[0].get("name")+".send", "event", "Social Click", event);
+            } catch(e){ console.log("Failed to send GA event: " + event)}
+        }
+    </script>
+    <style>
+        #social {
+            margin: 30px 0;
+            font-family: "Tahoma", arial, sans-serif;
+            background: #1eb1cc;
+            border-left: 5px solid #05829d;
+            color: #fff;
+            padding: 10px 20px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+        }
+        #social a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 8px;
+        }
+        #social a:hover {
+            border-bottom: 1px dashed #fff;
+        }
+        @media (max-width: 480px) {
+            #social {
+                display: none;
+            }
+        }
+    </style>
+</div>
+<h2 id="core-concepts">Core concepts</h2><pre><code class="language-java">TagCreator.class // Static utility class for creating all tags
+import static j2html.TagCreator.*; // Use static star import
 
-public static Tag repeatPasswordInput(String placeholder) {
-    return passwordInput(&quot;repeatPassword&quot;, placeholder);
-}
 
-public static Tag passwordInput(String identifier, String placeholder) {
-    return input()
-        .withType(&quot;password&quot;)
-        .withId(identifier)
-        .withName(identifier)
-        .withPlaceholder(placeholder)
-        .isRequired();
-}
+TagCreator.iff(boolean condition, T ifValue) // If-expression for use in method calls
+div().withClasses(&quot;menu-element&quot;, iff(isActive, &quot;active&quot;))
 
-public static Tag emailInput(String placeholder) {
-    return input()
-        .withType(&quot;email&quot;)
-        .withId(&quot;email&quot;)
-        .withName(&quot;email&quot;)
-        .withPlaceholder(placeholder)
-        .isRequired();
-}
 
-public static Tag submitButton(String text) {
-    return button().withType(&quot;submit&quot;).withText(text);
-}
-</code></pre><p>The equivalent HTML would be:</p><pre><code class="language-markup">&lt;input
-    type=&quot;password&quot;
-    id=&quot;enterPassword&quot;
-    name=&quot;enterPassword&quot;
-    placeholder=&quot;Enter password&quot;
-    required
-    &gt;
+TagCreator.iffElse(boolean condition, T ifValue, T elseValue) // If/else-expression for use in method calls
+div().withClasses(&quot;menu-element&quot;, iffElse(isActive, &quot;active&quot;, &quot;not-active&quot;))
 
-&lt;input
-    type=&quot;password&quot;
-    id=&quot;choosePassword&quot;
-    name=&quot;choosePassword&quot;
-    placeholder=&quot;Choose password&quot;
-    required
-    &gt;
 
-&lt;input
-    type=&quot;password&quot;
-    id=&quot;repeatPassword&quot;
-    name=&quot;repeatPassword&quot;
-    placeholder=&quot;Repeat password&quot;
-    required
-    &gt;
-
-&lt;input
-    type=&quot;email&quot;
-    id=&quot;email&quot;
-    name=&quot;email&quot;
-    placeholder=&quot;Email&quot;
-    required
-    &gt;
-
-&lt;button type=&quot;submit&quot;&gt;Text&lt;/button&gt;
-</code></pre><p>You can then use these partials, for example in a registration form:</p><pre><code class="language-java">h1(&quot;Please sign up&quot;),
-form().withMethod(&quot;post&quot;).with(
-    emailInput(&quot;Email address&quot;),
-    choosePasswordInput(&quot;Choose Password&quot;),
-    repeatPasswordInput(&quot;Repeat Password&quot;),
-    submitButton(&quot;Sign up&quot;)
-)
-</code></pre><p>Pretty clean, right? The rendered HTML is more verbose:</p><pre><code class="language-markup">&lt;h1&gt;Please sign up&lt;/h1&gt;
-&lt;form method=&quot;post&quot;&gt;
-    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email address&quot; required&gt;
-    &lt;input type=&quot;password&quot; id=&quot;choosePassword&quot; name=&quot;choosePassword&quot; placeholder=&quot;Choose password&quot; required&gt;
-    &lt;input type=&quot;password&quot; id=&quot;repeatPassword&quot; name=&quot;repeatPassword&quot; placeholder=&quot;Repeat password&quot; required&gt;
-    &lt;button type=&quot;submit&quot;&gt;Sign up&lt;/button&gt;
-&lt;/form&gt;
-</code></pre><p>Imagine if you wanted labels in addition. The Java snippet would look almost identical: You could create a partial called<em> passwordAndLabel() </em>and nothing but the method name would change. The resulting HTML however, would be twice or thrice as big, depending on whether or not you wrapped the input and label in another tag.</p><h2 id="loops">Loops</h2><p>Using Java 8&#x27;s lambda syntax, you can write loops (via streams) inside your HTML-builder:</p><pre><code class="language-java">body().with(
+Tag.class // Is extended by ContainerTag (ex &lt;div&gt;&lt;/div&gt; and EmptyTag (ex &lt;br&gt;)
+Tag.attr(String attribute, String value) // Set an attribute on the tag
+Tag.withXyz(String value) // Calls attr with predefined attribute (ex .withId, .withClass, etc.)</code></pre><h2 id="loops">Loops, each() and filter()</h2><p>Using Java 8&#x27;s lambda syntax, you can write loops (via streams) inside your HTML-builder:</p><pre><code class="language-java">body().with(
     div().withId(&quot;employees&quot;).with(
         employees.stream().map(employee -&gt;
             div().withClass(&quot;employee&quot;).with(
@@ -254,7 +177,87 @@ body().with(
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
-</code></pre><h2 id="dynamic-views">Dynamic views</h2><p>Once you&#x27;ve set up partials, you can call them from wherever, which greatly reduces potential errors. Let&#x27;s say we want to include the form from the partials-example in our webpage. We want a header above and a footer below. A lot of templating languages make you do this: </p><pre><code class="language-java">#include(&quot;/path/to/header&quot;)
+</code></pre><h2 id="partials">Partials</h2><p>You can create partials for elements you use a lot:</p><pre><code class="language-java">public static Tag enterPasswordInput(String placeholder) {
+    return passwordInput(&quot;enterPassword&quot;, placeholder);
+}
+
+public static Tag choosePasswordInput(String placeholder) {
+    return passwordInput(&quot;choosePassword&quot;, placeholder);
+}
+
+public static Tag repeatPasswordInput(String placeholder) {
+    return passwordInput(&quot;repeatPassword&quot;, placeholder);
+}
+
+public static Tag passwordInput(String identifier, String placeholder) {
+    return input()
+        .withType(&quot;password&quot;)
+        .withId(identifier)
+        .withName(identifier)
+        .withPlaceholder(placeholder)
+        .isRequired();
+}
+
+public static Tag emailInput(String placeholder) {
+    return input()
+        .withType(&quot;email&quot;)
+        .withId(&quot;email&quot;)
+        .withName(&quot;email&quot;)
+        .withPlaceholder(placeholder)
+        .isRequired();
+}
+
+public static Tag submitButton(String text) {
+    return button().withType(&quot;submit&quot;).withText(text);
+}
+</code></pre><p>The equivalent HTML would be:</p><pre><code class="language-markup">&lt;input
+    type=&quot;password&quot;
+    id=&quot;enterPassword&quot;
+    name=&quot;enterPassword&quot;
+    placeholder=&quot;Enter password&quot;
+    required
+    &gt;
+
+&lt;input
+    type=&quot;password&quot;
+    id=&quot;choosePassword&quot;
+    name=&quot;choosePassword&quot;
+    placeholder=&quot;Choose password&quot;
+    required
+    &gt;
+
+&lt;input
+    type=&quot;password&quot;
+    id=&quot;repeatPassword&quot;
+    name=&quot;repeatPassword&quot;
+    placeholder=&quot;Repeat password&quot;
+    required
+    &gt;
+
+&lt;input
+    type=&quot;email&quot;
+    id=&quot;email&quot;
+    name=&quot;email&quot;
+    placeholder=&quot;Email&quot;
+    required
+    &gt;
+
+&lt;button type=&quot;submit&quot;&gt;Text&lt;/button&gt;
+</code></pre><p>You can then use these partials, for example in a registration form:</p><pre><code class="language-java">h1(&quot;Please sign up&quot;),
+form().withMethod(&quot;post&quot;).with(
+    emailInput(&quot;Email address&quot;),
+    choosePasswordInput(&quot;Choose Password&quot;),
+    repeatPasswordInput(&quot;Repeat Password&quot;),
+    submitButton(&quot;Sign up&quot;)
+)
+</code></pre><p>Pretty clean, right? The rendered HTML is more verbose:</p><pre><code class="language-markup">&lt;h1&gt;Please sign up&lt;/h1&gt;
+&lt;form method=&quot;post&quot;&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email address&quot; required&gt;
+    &lt;input type=&quot;password&quot; id=&quot;choosePassword&quot; name=&quot;choosePassword&quot; placeholder=&quot;Choose password&quot; required&gt;
+    &lt;input type=&quot;password&quot; id=&quot;repeatPassword&quot; name=&quot;repeatPassword&quot; placeholder=&quot;Repeat password&quot; required&gt;
+    &lt;button type=&quot;submit&quot;&gt;Sign up&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><p>Imagine if you wanted labels in addition. The Java snippet would look almost identical: You could create a partial called<em> passwordAndLabel() </em>and nothing but the method name would change. The resulting HTML however, would be twice or thrice as big, depending on whether or not you wrapped the input and label in another tag.</p><h2 id="dynamic-views">Dynamic views</h2><p>Once you&#x27;ve set up partials, you can call them from wherever, which greatly reduces potential errors. Let&#x27;s say we want to include the form from the partials-example in our webpage. We want a header above and a footer below. A lot of templating languages make you do this: </p><pre><code class="language-java">#include(&quot;/path/to/header&quot;)
 #setTitle(&quot;Signup page&quot;)
 &lt;h1&gt;Please sign up&lt;/h1&gt;
 &lt;form&gt;
