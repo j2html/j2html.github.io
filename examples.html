@@ -116,7 +116,7 @@ Tag.withXyz(String value) // Calls attr with predefined attribute (ex .withId, .
                 img().withSrc(employee.getImgPath()),
                 p(employee.getTitle())
             )
-        ).collect(Collectors.toList())
+        ).toArray(ContainerTag[]::new)
     )
 )
 </code></pre><pre class="with-pre"><code class="language-java">body().with(
@@ -127,7 +127,7 @@ Tag.withXyz(String value) // Calls attr with predefined attribute (ex .withId, .
                 img().withSrc(employee.getImgPath()),
                 p(employee.getTitle())
             )
-        ).collect(Collectors.toList())
+        ).toArray(ContainerTag[]::new)
     )
 )
 </code></pre></div><p>j2html also offers a custom each method, which is slightly more powerful:</p><div class="code-compare nowith"><ul><li class="nowith-switch active">version 1.0.0 +</li><li class="with-switch">earlier versions</li></ul><pre class="nowith-pre"><code class="language-java">// each() lets you iterate through a collection and returns the generated HTML
